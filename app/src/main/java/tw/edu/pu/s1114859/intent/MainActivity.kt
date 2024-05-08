@@ -1,5 +1,6 @@
 package tw.edu.pu.s1114859.intent
 
+import android.app.SearchManager
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -73,13 +74,13 @@ fun FirstScreen(){
         }
         Button(
             onClick = {
-                var it = Intent(Intent.ACTION_SENDTO)
-                it.data = Uri.parse("mailto:tcyang@gm.pu.edu.tw")
+                var it = Intent(Intent.ACTION_WEB_SEARCH)
+                it.putExtra(SearchManager.QUERY, "靜宜資管")
                 context.startActivity(it)
             }
         )
         {
-            Text(text = "開啟瀏覽器")
+            Text(text = "搜尋關鍵字")
         }
 
     }
