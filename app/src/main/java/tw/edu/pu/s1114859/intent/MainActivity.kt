@@ -73,8 +73,8 @@ fun FirstScreen(){
         }
         Button(
             onClick = {
-                var it = Intent(Intent.ACTION_VIEW)
-                it.data = Uri.parse(url)
+                var it = Intent(Intent.ACTION_SENDTO)
+                it.data = Uri.parse("mailto:tcyang@gm.pu.edu.tw")
                 context.startActivity(it)
             }
         )
